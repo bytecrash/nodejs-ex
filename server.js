@@ -5,6 +5,26 @@ var express = require('express'),
     eps     = require('ejs'),
     morgan  = require('morgan');
     
+main.jsJavaScript
+
+var Bot = require('node-telegram-bot-api');
+
+var TOKEN = '389470588:AAGS-8jQGNlSTsPKyfSMcxf0CtQLswDCaTY';
+var bot = new Bot(TOKEN, { polling: true });
+
+bot.onText(/\/?start/, function(msg) {
+    bot.sendMessage(msg.chat.id, 'به من بگی ping می‌گم pong و بالعکس! :)');
+});
+
+bot.onText(/\/?ping/, function(msg) {
+    bot.sendMessage(msg.chat.id, 'pong');
+});
+
+bot.onText(/\/?pong/, function(msg) {
+    bot.sendMessage(msg.chat.id, 'ping');
+});
+
+
 Object.assign=require('object-assign')
 
 app.engine('html', require('ejs').renderFile);
